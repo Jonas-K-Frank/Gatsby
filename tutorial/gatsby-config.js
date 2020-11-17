@@ -8,11 +8,12 @@ module.exports = {
   siteMetadata: {
     title:'My first Gatsby tutorial',
     description:'This is my first Gatsby tutorial with a lot of GraphQL',
-    author: '@JonasFrank',
+    author: 'JonasFrank',
     data: ['itm 1', 'item 2'],
     person: {name: 'Jeppe', age: 45}
   },
-  plugins: [`gatsby-plugin-styled-components`,
+  plugins: [`gatsby-plugin-styled-components`,      `gatsby-transformer-sharp`, 
+  `gatsby-plugin-sharp`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {
