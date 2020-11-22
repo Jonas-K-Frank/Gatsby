@@ -1,42 +1,37 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
-  "license": "MIT",
+  "description": "A Strapi application",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
-    "gatsby": "^2.21.0",
-    "gatsby-image": "^2.4.0",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
-    "gatsby-plugin-react-helmet": "^3.3.1",
-    "gatsby-plugin-sharp": "^2.6.0",
-    "gatsby-plugin-sitemap": "^2.4.2",
-    "gatsby-source-filesystem": "^2.3.0",
-    "gatsby-source-strapi": "0.0.12",
-    "gatsby-transformer-sharp": "^2.5.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0",
-    "react-icons": "^3.10.0",
-    "react-markdown": "^4.3.1"
+    "strapi": "3.3.3",
+    "strapi-admin": "3.3.3",
+    "strapi-utils": "3.3.3",
+    "strapi-plugin-content-type-builder": "3.3.3",
+    "strapi-plugin-content-manager": "3.3.3",
+    "strapi-plugin-users-permissions": "3.3.3",
+    "strapi-plugin-email": "3.3.3",
+    "strapi-plugin-upload": "3.3.3",
+    "strapi-connector-bookshelf": "3.3.3",
+    "knex": "<0.20.0",
+    "sqlite3": "latest"
   },
-  "devDependencies": {
-    "prettier": "2.0.5"
+  "author": {
+    "name": "A Strapi developer"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  "strapi": {
+    "uuid": "77454cf9-965e-4de4-98fb-d89d172059f6"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }
