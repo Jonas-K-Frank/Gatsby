@@ -51,6 +51,10 @@
     "date": {
       "type": "date",
       "required": true
+    },
+    "Author": {
+      "type": "string",
+      "required": true
     }
   }
 }

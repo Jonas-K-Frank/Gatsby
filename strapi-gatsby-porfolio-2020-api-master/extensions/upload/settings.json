@@ -1,0 +1,8 @@
+{
+    "provider": "cloudinary",
+    "providerOptions": {
+      "cloud_name": "jonaskfrank",
+      "api_key": "654613124491515",
+      "api_secret": "1CxrZwtDXhcBwYWIG1Eq_I68jL0"
+    }
+  }
