@@ -1004,9 +1004,16 @@ Blog Template
 .blog-template {
   padding: 5rem 0;
 }
-
+.overskrift{
+  font-weight: bold;
+  font-size: 2em;
+}
+.blog-content h2{
+  font-size: 1.2em;
+}
 .blog-template h1,
-.blog-template h2 {
+.blog-template h2 
+.blog-template h3{
   text-align: center;
 }
 .blog-template ul {
