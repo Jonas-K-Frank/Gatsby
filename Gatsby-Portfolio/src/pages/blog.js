@@ -16,7 +16,7 @@ export const query = graphql`
     allStrapiBlogs{
       nodes {
         title
-        Author
+        author
         slug
         content
         desc
