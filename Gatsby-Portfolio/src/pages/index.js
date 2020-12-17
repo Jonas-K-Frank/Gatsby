@@ -29,7 +29,7 @@ export const query = graphql`
   {
     allStrapiProjects(filter: {featured: {eq: true}}) {
       nodes {
-        github
+        GitHub
         id
         description
         title
