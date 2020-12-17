@@ -17,7 +17,7 @@ export const query = graphql`
   {
     allStrapiProjects {
       nodes {
-        github
+        GitHub
         id
         description
         title
