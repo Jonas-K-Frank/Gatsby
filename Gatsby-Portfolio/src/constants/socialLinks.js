@@ -1,9 +1,9 @@
 import React from "react"
 import {
-  FaFacebookSquare,
+  //FaFacebookSquare,
   FaLinkedin,
   FaInstagramSquare,
-  FaBehanceSquare,
+  //FaBehanceSquare,
   FaTwitterSquare,
   FaGithubSquare,
 } from "react-icons/fa"

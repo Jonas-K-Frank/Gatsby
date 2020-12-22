@@ -1,13 +1,15 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import Projects from "../components/Projects"
+import Projects from "../components/Projekter"
+import SEO from "../components/SEO"
 // ...GatsbyImageSharpFluid
 
 const ProjectsPage = ({
   data:{allStrapiProjects:{nodes:projects}}
 }) => {
   return <Layout>
+    <SEO title="Projekter" />
     <section className="project-page">
       <Projects projects={projects} title="Alle projekter"/>
     </section>
