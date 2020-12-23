@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 
 const Blog = ({data:{allStrapiBlogs:{nodes:blogs}}}) => {
   return <Layout>
-    <SEO title="Hovedet-på-bloggen" />
+    <SEO title="Hovedet på bloggen" />
     <section className="blog-page">
       <Blogs blogs={blogs} title="blogs" />
     </section>
