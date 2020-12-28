@@ -18,6 +18,18 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Roboto',
+            variable: true,
+            weights: ['400','500','700']
+          }
+        ]
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {
@@ -32,7 +44,7 @@ module.exports = {
         username: `gatsbyjs`,
       },
     },
-    {
+    /* {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -45,6 +57,6 @@ module.exports = {
           },
         ],
       },
-    },
+    }, */
   ],
 }
