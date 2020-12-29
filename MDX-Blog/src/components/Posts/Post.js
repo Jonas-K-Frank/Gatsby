@@ -5,8 +5,29 @@ import { IoMdArrowRoundForward } from 'react-icons/io'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const Post = () => {
-  return <Wrapper>Post Component</Wrapper>
+const Post = ({frontmatter,excerpt}) => {
+  const {title, image, slug, date, category, readTime, author} = frontmatter;
+  return (
+  <Wrapper>
+    <Image className="img" fluid={image.childImageSharp.fluid} />
+    <div className="info">
+      <span className="category">{category}</span>
+      <h3>{title}</h3>
+      <div className="underline"></div>
+      <p>{excerpt}</p>
+      <Link className="link" to={`/posts/${slug}`} >
+        Læs resten <IoMdArrowRoundForward />
+      </Link>
+      <footer>
+        <span className="date">
+          <FaRegClock className="icon" ></FaRegClock>
+          {date}
+        </span>
+        <span>Kan læses på {readTime} min. </span>
+      </footer>
+    </div>
+  </Wrapper>
+  )
 }
 
 const Wrapper = styled.article`
