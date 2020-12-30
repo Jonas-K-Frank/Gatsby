@@ -4,10 +4,46 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { Link } from 'gatsby'
 import Image from 'gatsby-image'
 import Title from './Title'
-// ...GatsbyImageSharpFluid
+// 
+
+const query = graphql`
+  {
+    allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 5) {
+      nodes {
+        frontmatter {
+          title
+          date(formatString: "DD MM YYYY")
+          slug
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        id
+      }
+    }
+  }
+`
 
 const Recent = () => {
-  return <Wrapper>Banner Recent</Wrapper>
+  const data = useStaticQuery(query);
+  const {allMdx:{nodes:posts}} = data;
+  return <Wrapper>
+    <Title title="seneste indlæg" />
+    {posts.map(post => {
+      const {title,slug,date,image:{childImageSharp:{fluid}} } = post.frontmatter;
+      return <Link className="post" to={`/posts/${slug}`} key={post.id} >
+        <Image className="img" fluid={fluid} ></Image>
+        <div>
+          <h5>{title}</h5>
+          <p>{date}</p>
+        </div>
+      </Link>
+    })}
+  </Wrapper>
 }
 
 const Wrapper = styled.div`
