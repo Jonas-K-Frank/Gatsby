@@ -10,7 +10,7 @@ readTime: 17
 
 import {Link} from 'gatsby'
 import {FiInfo} from 'react-icons/fi'
-import {Counter,LikeButton} from '../../components/Complete'
+import {Counter,LikeButton,RegVideo,Video} from '../../components/Complete'
 
 # Min første MDX fil
 
@@ -67,5 +67,15 @@ const LikeButton = () => {
 ```
 <LikeButton />
 
+<div className="mdx-img">
+
+![nice image](./images/gatsby-1.png)
+
+</div>
+
+<h2>Video Components</h2>
+<RegVideo />
+
+<Video />
 
 <Link className="btn center-btn" to="/posts">alle indlæg</Link>
