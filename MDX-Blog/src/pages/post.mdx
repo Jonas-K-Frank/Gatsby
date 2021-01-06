@@ -1,28 +1,29 @@
-import {Link} from 'gatsby'
-import {FiInfo} from 'react-icons/fi'
-import {Counter,LikeButton} from '../components/Complete'
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton, Video, RegVideo } from '../components/Complete'
 
 <section className="mdx-page">
 
 # Min første MDX fil
 
-**The path of the righteous man** is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious *anger* those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
+**The path of the righteous man** is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious _anger_ those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
 
 ## h2
+
 ###### h6
 
 <div className="code">
 
 ```js
-const firstName = "John"
-const lastName = "Schmidt"
+const firstName = 'John'
+const lastName = 'Schmidt'
 ```
-</div>   
 
+</div>
 
 <div className="nice-text">
 
-### The way they make shows 
+### The way they make shows
 
 <FiInfo className="nice-text-icon" />
 
@@ -34,9 +35,9 @@ Well, the way they make shows is, they make one show. That show's called a pilot
 <Counter />
 
 ```jsx
-import React from "react"
-import styled from "styled-components"
-import { AiOutlineLike } from "react-icons/ai"
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
 const LikeButton = () => {
   const [value, setValue] = React.useState(0)
   return (
@@ -55,11 +56,24 @@ const LikeButton = () => {
     </Wrapper>
   )
 }
-
 ```
+
 <LikeButton />
 
+<div className="mdx-img">
 
-<Link className="btn center-btn" to="/posts">alle indlæg</Link>
+![nice image](../assets/gatsby-1.png)
+
+</div>
+
+<h2>Video Components</h2>
+<RegVideo />
+
+<Video />
+<h3>random heading</h3>
+<h3>Another random heading</h3>
+<Link className="btn center-btn" to="/posts">
+  alle indlæg
+</Link>
 
 </section>
