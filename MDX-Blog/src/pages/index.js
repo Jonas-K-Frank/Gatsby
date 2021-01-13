@@ -5,16 +5,21 @@ import Posts from '../components/Posts'
 import { graphql } from 'gatsby'
 import SEO from '../components/SEO'
 
-const IndexPage = ({data}) => {
-  const {allMdx:{nodes:posts}} = data;
-  return <Layout>
-    <Hero showPerson/>
-    <Posts posts={posts} title="Nyeste indlæg" />
-  </Layout>
+const IndexPage = ({ data }) => {
+  const {
+    allMdx: { nodes: posts },
+  } = data
+  return (
+    <Layout>
+      <SEO />
+      <Hero showPerson />
+      <Posts posts={posts} title="Nyeste indlæg" />
+    </Layout>
+  )
 }
 export const query = graphql`
   {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 3) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 3) {
       nodes {
         excerpt
         frontmatter {
@@ -27,7 +32,7 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid {
-              ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid
               }
             }
           }

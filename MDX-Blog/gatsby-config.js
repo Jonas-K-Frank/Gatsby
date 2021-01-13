@@ -1,4 +1,13 @@
 module.exports = {
+siteMetadata:{
+  title: `Gatsby MDX test run`,
+  description: `the coolest Gatsby site known to man`,
+  titleTemplate: `%s | Gatsby MDX`,
+  url: `https://gatsby-mdx-tutorial.netlify.app/`,
+  image: `mainImg.png`,
+  twitterUsername: `JonasKFrank`
+},
+
   plugins: [
     // `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
