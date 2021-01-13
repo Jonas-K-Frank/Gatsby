@@ -1,0 +1,81 @@
+---
+title: Gatsby Tutorial
+slug: gatsby-tutorial
+image: ./images/gatsby-1.png
+date: 2020-12-29
+author: john smith
+category: gatsby
+readTime: 17
+---
+
+import {Link} from 'gatsby'
+import {FiInfo} from 'react-icons/fi'
+import {Counter,LikeButton,RegVideo,Video} from '../../components/Complete'
+
+# Min første MDX fil
+
+**The path of the righteous man** is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious *anger* those who would attempt to poison and destroy My brothers. And you will know **My name is the Lord** when I lay My vengeance upon thee.
+
+## h2
+###### h6
+
+<div className="code">
+
+```js
+const firstName = "John"
+const lastName = "Schmidt"
+```
+</div>   
+
+
+<div className="nice-text">
+
+### The way they make shows 
+
+<FiInfo className="nice-text-icon" />
+
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+</div>
+
+<h2> React Component </h2>
+<Counter />
+
+```jsx
+import React from "react"
+import styled from "styled-components"
+import { AiOutlineLike } from "react-icons/ai"
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+
+```
+<LikeButton />
+
+<div className="mdx-img">
+
+![nice image](./images/gatsby-1.png)
+
+</div>
+
+<h2>Video Components</h2>
+<RegVideo />
+
+<Video />
+
+<Link className="btn center-btn" to="/posts">alle indlæg</Link>
